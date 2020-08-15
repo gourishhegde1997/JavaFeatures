@@ -7,7 +7,13 @@ public class JavaExceptionSample1 {
 	static Logger logger = Logger.getLogger(JavaExceptionSample1.class);
 
 	public static void main(String[] args) {
-		logger.info("Hello world...!");
+		int x = 0;
+		int y = 0;
+		try {
+			int z = x/y;
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+		}
 	}
 
 }
