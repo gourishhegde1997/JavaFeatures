@@ -14,7 +14,6 @@ public class JavaExceptionSample1 {
 	
 	private static void divide(int x, int y) {
 		try {
-//			int z = (y != 0) ? (x/y) : -1;
 			int z = x/y;
 			logger.info("Result is : "+z);
 		} catch (Exception e) {
