@@ -9,11 +9,17 @@ public class JavaExceptionSample1 {
 	public static void main(String[] args) {
 		int x = 0;
 		int y = 0;
+		divide(x,y);
+	}
+	
+	private static void divide(int x, int y) {
 		try {
+//			int z = (y != 0) ? (x/y) : -1;
 			int z = x/y;
 			logger.info("Result is : "+z);
 		} catch (Exception e) {
-			logger.error(e.getMessage(), e);
+			logger.error("Error message"+e.getMessage());
+			logger.error("Erro toString()"+e.toString());
 		}
 	}
 
