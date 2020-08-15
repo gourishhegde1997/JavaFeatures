@@ -11,6 +11,7 @@ public class JavaExceptionSample1 {
 		int y = 0;
 		try {
 			int z = x/y;
+			logger.info("Result is : "+z);
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
 		}
