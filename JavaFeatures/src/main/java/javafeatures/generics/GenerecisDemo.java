@@ -1,8 +1,9 @@
 package javafeatures.generics;
 
 class Record<E> {
-//    private E record;
+    private E record;
     public void display(E item) {
+    	this.record = item;
         System.out.println(item);
     }
 }
