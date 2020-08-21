@@ -3,8 +3,12 @@ package javafeatures.generics;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 class Record2<E>
 {
+	
+	Logger logger = Logger.getLogger(Record2.class);
 	List<E> record =new ArrayList<>();
     
     @Override
@@ -16,7 +20,7 @@ class Record2<E>
     	record.add(e);
     }
     public void display(Record2<? extends Student2> record) {
-    	System.out.println("student record:"+record);
+    	logger.info("student record:"+record);
 }
 }
 
@@ -31,6 +35,7 @@ class Student2
         this.name=name;
     }
     
+    @Override
     public String toString()
     {
         return "Id = "+id+" Name = "+name;
@@ -46,6 +51,8 @@ class Dayscholar extends Student2
         super(id,name);
         this.stipend=stipend;
     }
+    
+    @Override
     public String toString()
     {
         return "Id = "+id+" Name = "+name+" Stipend = "+stipend;
@@ -54,6 +61,8 @@ class Dayscholar extends Student2
 
 class WildcardsDemo
 {   
+	Logger logger = Logger.getLogger(WildcardsDemo.class);
+	
     public static void main(String args[])
     {
     Record2<Student2> studentrecord = new Record2<>();
