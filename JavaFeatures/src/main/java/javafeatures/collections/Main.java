@@ -33,7 +33,11 @@ public class Main {
 			logger.info("Current Item : "+listIterator.next());
 		}
 		
-		List<Course> courseLList = new LinkedList<>();
+		while(listIterator.hasPrevious()) {
+			logger.info(listIterator.previous());
+		}
+		
+		LinkedList<Course> courseLList = new LinkedList<Course>();
 		courseLList.add(new Course("Java"));
 		courseLList.add(new Course("Hibernate"));
 		courseLList.add(new Course("Spring5"));
@@ -43,6 +47,7 @@ public class Main {
 		while(llistIterator.hasNext()) {
 			logger.info(llistIterator.next());
 		}
+		
 	}
 
 }
