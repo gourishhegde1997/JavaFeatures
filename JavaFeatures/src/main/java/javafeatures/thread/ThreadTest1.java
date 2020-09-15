@@ -8,6 +8,8 @@ public class ThreadTest1 {
 		Thread threadObj = new Thread(thread2);
 		
 		System.out.println("Starting threads");
+		thread1.setPriority(Thread.MIN_PRIORITY);
+		threadObj.setPriority(Thread.MAX_PRIORITY);
 		thread1.start();
 		threadObj.start();
 	}
