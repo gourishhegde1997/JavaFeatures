@@ -1,6 +1,6 @@
 package javafeatures.collections;
 
-public class Course {
+public class Course implements Comparable<Course>{
 	private String courseName;
 
 	public String getCourseName() {
@@ -19,6 +19,11 @@ public class Course {
 	@Override
 	public String toString() {
 		return "Course [courseName=" + courseName + "]";
+	}
+
+	@Override
+	public int compareTo(Course course) {
+		return this.getCourseName().compareTo(course.getCourseName());
 	}
 
 }
