@@ -53,6 +53,10 @@ public class Student implements Comparable<Student>{
 	public int compareTo(Student otherStudent) {
 		return this.rollNo.compareTo(otherStudent.getRollNo());
 	}
+	
+	public static int compareByName(Student stud1, Student stud2) {
+		return stud1.getStudentName().compareTo(stud2.getStudentName());
+	}
 
 	private Set<Student> studentSet = new TreeSet<>();
 	private Set<Integer> studentRollNoSet = new TreeSet<>();
