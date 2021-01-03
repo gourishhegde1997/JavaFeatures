@@ -2,10 +2,6 @@ package test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 import org.junit.Test;
 
 public class BuyCar {
