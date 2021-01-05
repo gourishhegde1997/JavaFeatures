@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
+
 import org.apache.log4j.Logger;
 
 public class EmployeeServices {
@@ -27,6 +29,10 @@ public class EmployeeServices {
 //		double j = 6;
 //		double k = i / j;
 //		System.out.println(k);
+//		seniorEmpList.stream().so
+//		Stream<String> stm = Stream.of("Java 8 ", " in ", " action ");
+//		stm.forEach(System.out::print);
+//		stm.forEach(System.out::print);
 		
 		seniorEmpList.forEach(System.out::println);
 	}
