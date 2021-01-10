@@ -32,7 +32,8 @@ public class Main {
 		System.out.println("Longest Name is : " + longest.get());
 		
 		logger.info("Run completed");
-
+		
+		int[] array = new int[] {1, 3, 5, 7, 9};
 	}
 
 }
