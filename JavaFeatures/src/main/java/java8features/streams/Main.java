@@ -1,6 +1,8 @@
 package java8features.streams;
 
+import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +20,7 @@ public class Main {
 		System.out.println();
 		
 		// sort call
-		namesList.stream().sorted().forEach(System.out::println);
+		namesList.stream().sorted((s1,s2) -> s2.compareTo(s1)).forEach(System.out::println);
 		System.out.println();
 		
 		// filter method call
@@ -33,7 +35,12 @@ public class Main {
 		
 		logger.info("Run completed");
 		
-		int[] array = new int[] {1, 3, 5, 7, 9};
+		Integer[] array = new Integer[] {1, 3, 5, 7, 9};
+		Arrays.sort(array, (Integer i, Integer j) -> j - i);
+		Arrays.stream(array).forEach(System.out::println);
+		Optional<Integer> max = Arrays.stream(array).reduce(Math::max);
+		Optional<Integer> min = Arrays.stream(array).reduce(Math::min);
+		System.out.println();
 	}
 
 }
