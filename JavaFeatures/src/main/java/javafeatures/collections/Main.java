@@ -19,6 +19,8 @@ public class Main {
 		courseList.add(new Course("Spring5"));
 		courseList.add(new Course("ReactJS"));
 		
+		System.out.println(courseList.hashCode());
+		
 		for(Course course : courseList) {
 			logger.info(course);
 		}
